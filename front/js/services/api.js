@@ -11,7 +11,7 @@ export const getProductList = () => fetch(urlProducts)
   .then(toJSON)
   .catch(console.log);
 
-export const getProduct = (id) => fetch(urlProducts + id)
+export const getOneProduct = (id) => fetch(urlProducts + id)
   .then(toJSON)
   .catch(console.log);
 
