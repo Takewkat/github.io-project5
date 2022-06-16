@@ -1,16 +1,7 @@
-const baseUrl = 'http://localhost:3000/api';
-const urlOneProduct = `${baseUrl}/products/`;
+import { getOneProduct } from "./services/api.js";
 
 let params = new URLSearchParams(document.location.search);
 const id = params.get('id');
-
-const getOneProduct = (id) => fetch(urlOneProduct + id)
-  .then(res => {
-    if (res.ok) {
-      return res.json();
-    }
-  })
-  .catch(console.log);
 
 function loadOneProduct(item) {
   //console.log(item);
@@ -29,17 +20,16 @@ function loadOneProduct(item) {
   const itemColors = document.querySelector('#colors');
 
   itemImage.innerHTML = `<img src="${productImage}" alt="${productTxt}">`;
-  itemTitle.textContent = `${productName}`;é
+  itemTitle.textContent = `${productName}`;
   itemPrice.textContent = `${productPrice}`;
   itemDescription.textContent = `${productDescription}`;
 
   for (let color of productColors) {
     itemColors.innerHTML += `<option value="${color}">${color}</option>`;
   }
-
 }
 
 getOneProduct(id).then(loadOneProduct);
 
 
-
+//////////////////////////////////////////////////////////////////////////////////

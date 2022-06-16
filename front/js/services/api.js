@@ -6,18 +6,16 @@ const toJSON = res => {
   }
 }
 
+//index.html
 const urlProducts = `${baseUrl}/products/`;
 export const getProductList = () => fetch(urlProducts)
   .then(toJSON)
   .catch(console.log);
 
-export const getOneProduct = (id) => fetch(urlProducts + id)
+//product.html
+const urlOneProduct = `${baseUrl}/products/`;
+export const getOneProduct = (id) => fetch(urlOneProduct + id)
   .then(toJSON)
   .catch(console.log);
-
-
-
-
-
 
 

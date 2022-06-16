@@ -1,13 +1,4 @@
-const baseUrl = 'http://localhost:3000/api';
-const urlProducts = `${baseUrl}/products/`;
-
-const getProductList = () => fetch(urlProducts)
-  .then(res => {
-    if (res.ok) {
-      return res.json();
-    }
-  })
-  .catch(console.log);
+import { getProductList } from "./services/api.js";
 
 function loadProducts(data) {
   const indexItems = document.querySelector('#items');
