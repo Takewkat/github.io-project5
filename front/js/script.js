@@ -1,7 +1,10 @@
 import { getProductList } from "./services/api.js";
+import getElement from "./utils/getElement.js";
+
+//LOAD all products to index.html
 
 function loadProducts(data) {
-  const indexItems = document.querySelector('#items');
+  const indexItems = getElement('#items');
 
   data.forEach(item => {
     const productId = item._id;
@@ -14,8 +17,8 @@ function loadProducts(data) {
     `<a href="./product.html?id=${productId}">
       <article>
         <img src="${productImage}" alt="${productTxt}">
-        <h3 class="productName">"${productName}"</h3>
-        <p class="productDescription">"${productDescription}"</p>
+        <h3 class="productName">${productName}</h3>
+        <p class="productDescription">${productDescription}</p>
       </article>
     </a>`
 

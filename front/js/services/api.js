@@ -1,6 +1,7 @@
 const baseUrl = 'http://localhost:3000/api';
 
 const toJSON = res => {
+  //if(response.status >= 200 && response.status <= 299)
   if (res.ok) {
     return res.json();
   }
