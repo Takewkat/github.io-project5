@@ -1,4 +1,4 @@
-//always use local storage through the In-Memory Storage
+//always use local storage through the In-Memory Storage in cartStore.js & orderStore.js
 
 const getStorageItem = (item) => {
   let storageItem = localStorage.getItem(item)

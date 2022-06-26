@@ -16,5 +16,9 @@ console when the server starts, e.g. `Listening on port 3001`.
 
 ### Open html files ###
 
-Open with Live Server
+Open .html files with Live Server please
+
+The task is to write Javascript for the frontend. I can't use frameworks and libraries in this project.
+My code is in the front/js folder, the rest of the code is written by Openclassroom teachers =)
+
 

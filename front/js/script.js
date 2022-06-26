@@ -1,5 +1,6 @@
-import { getProductList } from "./services/api.js";
+import { getAllProducts } from "./services/api.js";
 import getElement from "./utils/getElement.js";
+import totalQuantityHeader from "./header.js";
 
 //LOAD all products to index.html
 
@@ -26,4 +27,5 @@ function loadProducts(data) {
   });
 }
 
-getProductList().then(loadProducts);
+getAllProducts().then(loadProducts);
+totalQuantityHeader();
